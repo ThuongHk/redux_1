@@ -1,0 +1,1 @@
+// export const jobsSelector = (state)=> state.jobs;
