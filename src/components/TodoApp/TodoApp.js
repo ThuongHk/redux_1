@@ -1,14 +1,16 @@
 import React from 'react';
 // import {jobsSelector} from '../redux/selector';
 import {useDispatch,useSelector} from 'react-redux';
-import {addJob} from '../redux/actions';
+import {addJob} from '../../redux/actions';
 import {useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
+import {showTodo} from '../../redux/selector';
 
 function TodoApp(props) {
     const dispatch = useDispatch();
     const [text, setText] = useState('');
-    const listJobs = useSelector(state => state);
+    const listJobs = useSelector(showTodo);
+    // const searchText = useSelector()
      console.log(listJobs);
     const handleChange = (e)=>{
       setText(e.target.value)
@@ -28,8 +30,7 @@ function TodoApp(props) {
 
     return (
             <div>
-            <p>Search:</p>
-            <input type="text"/>
+          
             <p> Nhập công việc:</p>
             <input type='text' value={text} onChange={handleChange}/>  <button onClick={handleClickAddTodo} type="submit">Thêm</button>
 

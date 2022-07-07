@@ -1,13 +1,13 @@
 import './App.css';
-import TodoApp from './components/TodoApp';
-import {useSelector} from 'react-redux';
+import TodoApp from './components/TodoApp/TodoApp';
+import Search from './components/Search/Search';
 
-function App() {
 
-  const select = useSelector(state => state)
-  console.log(select);
+function App() { 
+  
   return (
     <div className="App">
+      <Search/>
     <TodoApp/>
      
     </div>

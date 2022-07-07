@@ -4,3 +4,10 @@ export const addJob = (data)=>{
         payload: data
     }
 }
+
+export const searchJob = (text)=>{
+    return {
+        type: 'SEARCHJOB',
+        payload: text
+    }
+}

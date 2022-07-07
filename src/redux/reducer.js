@@ -1,6 +1,6 @@
  import {combineReducers} from 'redux';
  const initialState = {
-    search: '',
+    search: [],
     jobs: [
         {
             id: 1,
@@ -22,13 +22,21 @@
 
 
    const rootReducer = (state = initialState, action) =>{
-    console.log(state, action);
+//    console.log(state,action);
    switch(action.type){
     case 'ADDJOB': 
-    return {
+    return  {
         ...state,
         jobs: [ ...state.jobs, action.payload ]
     }
+
+    case 'SEARCHJOB':
+        return {
+            ...state,
+            search: [...state.search, action.payload]
+
+        }
+    default: return state
    }
 }
 
