@@ -9,9 +9,9 @@ function Search(props) {
 
     const handleChange = (e) => {
         setText(e.target.value)
-        dispatch(searchJob(e.target.value))
-        // console.log(e.target.value);
+        dispatch(searchJob(e.target.value));
     }
+   
     return (
         <div>
               <p>Search:</p>

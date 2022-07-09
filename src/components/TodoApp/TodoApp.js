@@ -10,11 +10,10 @@ function TodoApp(props) {
     const dispatch = useDispatch();
     const [text, setText] = useState('');
     const listJobs = useSelector(showTodo);
-    // const searchText = useSelector()
-     console.log(listJobs);
+   
     const handleChange = (e)=>{
       setText(e.target.value)
-    //   console.log(e.target.value);
+    
     }
 
     const handleClickAddTodo = () => {
